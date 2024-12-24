@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scrollbar-bullshit">
     <head>
+        <link rel="stylesheet" href="main.css">
         <title>Sen's Site</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body style="background-color: #181825;">
-        <div>
-            <h1 style="text-align: center; color: #cdd6f4; font-size: 50px;">Under Construction!</h1>
-            <p style="text-align: center; color: #cdd6f4; font-size: 20px;">Please come back soon, Senexd.me is under construction.<br>Making a website solo is an VERY time-consuming process, especially making it look good.</p>
-            <p style="text-align: center; color: #cdd6f4; font-size: 20px;">Check <a href="https://bsky.app/profile/senexd.me">my Bluesky<a> for more information and updates</p>
+        <div style="position:sticky; top: 10px; padding: 30px 22px; background-color: #11111b; border-radius: 15px; box-shadow:0px 0px 5px 3px #11111b;">
+            <div class="buttons">
+                <button class="bannerButtons" id="homeButton">Home</button>
+                <button class="bannerButtons" id="aboutButton">About Me</button>
+                <button class="bannerButtons" id="myWorkButton">My Work</button>
+            </div>
+            <div class="bannerSocials">
+                <a href="https://bsky.app/profile/senexd.me">
+                    <img class="socialImages" src="images/bsky.png" alt="Bluesky">
+                </a>
+                <a href="https://discord.gg/RHpPQrYMEQ">
+                    <img class="socialImages" src="images/discord-mark-blue.png" alt="Discord">
+                </a>
+                <a href="https://www.youtube.com/@Senexd">
+                    <img class="socialImages" src="images/yt_icon_rgb.png" alt="Youtube">
+                </a>
+            </div>
+            <div class="time" id="time">
+            </div>
         </div>
+        <div style="overflow-y: scroll; scroll-behavior: smooth; scrollbar-width: none;">
+            <div id="Home">
+                <header id="mainHeader" style="color: #cdd6f4; font-size: 250px; text-align: center;"></header>
+                <p id="splashText" style="color: #bac2de; text-align: center; font-size:40px;"></p>
+                <div style="padding: 75px;"></div>
+                <div id="loadPostSplash" style="opacity: 0;">
+                    <p style="color: #cdd6f4; text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px; text-align: justify;">HEY! You, yeah you, the person reading this. Welcome to my personal website, where you can find some information about me and my work. Click the buttons on the banner above to shimmy your way over to learn more about me, or maybe move yourself over to the music tab and listen to some of my tunes. Quite possibly you might check out my socials, possibly get in touch with me, either about a bug/typo here, maybe some feedback on my music, or maybe just to say have a short chat. Who knows, you might be able to find something interesting here.</p>
+                </div>
+            </div>
+        
+            <div id="About">
+                <header id="mainHeader" style="color: #cdd6f4; font-size: 250px; text-align: center;">About Me</header>
+                <p id="aboutWIP" style="color: #cdd6f4; text-align: center;">Work in progress! Check back later to see what I've been working on</p>
+            </div>
+        
+            <div id="MyWork">
+                <header id="mainHeader" style="color: #cdd6f4; font-size: 250px; text-align: center;">My Work</header>
+                <p id="workWIP"  style="color: #cdd6f4; text-align: center;">Work in progress! Check back later to see what I've been working on</p>
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script src="time.js"></script>
+        <script src="pageChange.js"></script>
     </body>
 </html>
