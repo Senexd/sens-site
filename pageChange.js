@@ -3,7 +3,7 @@ let slideIndex = 0;
 
 document.getElementById("Home").style.display = "block";
 document.getElementById("About").style.display = "none";
-document.getElementById("MyWork").style.display = "none";
+document.getElementById("Comms").style.display = "none";
 
 document.getElementById("homeButton").addEventListener("click", function () {
     document.getElementById(activeDiv).style.display = "none";
@@ -17,8 +17,8 @@ document.getElementById("aboutButton").addEventListener("click", function () {
     activeDiv = "About";
 });
 
-document.getElementById("myWorkButton").addEventListener("click", function() {
+document.getElementById("commButton").addEventListener("click", function () {
     document.getElementById(activeDiv).style.display = "none";
-    document.getElementById("MyWork").style.display = "block";
-    activeDiv = "MyWork";
+    document.getElementById("Comms").style.display = "block";
+    activeDiv = "Comms";
 });
