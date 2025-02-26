@@ -53,4 +53,6 @@ window.onload = function () {
     window.scrollTo(0, 0); // Ensure the page starts at the top
 };
 
+
 typeText();
+
