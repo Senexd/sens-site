@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #e6e9ef;
+    --text-color: #4c4f69;
+    --accent-color: #209fb5;
+    --banner-bg: #dce0e8;
+    --button-bg: #ccd0da;
+    --button-text: #4c4f69;
+    --button-hover-bg: #4c4f69;
+    --button-hover-text: #ccd0da;
+    --box-shadow: 0px 0px 5px 3px #dce0e8;
+    --scrollbar-track: #dce0e8;
+    --scrollbar-thumb: #ccd0da;
+}
+
+.dark-mode {
+    --bg-color: #181825;
+    --text-color: #cdd6f4;
+    --accent-color: #74c7ec;
+    --banner-bg: #11111b;
+    --button-bg: #313244;
+    --button-text: #cdd6f4;
+    --button-hover-bg: #cdd6f4;
+    --button-hover-text: #313244;
+    --box-shadow: 0px 0px 5px 3px #11111b;
+    --scrollbar-track: #11111b;
+    --scrollbar-thumb: #313244;
+}
+
+body {
+    font-family: Garamond, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.scrollbar-bullshit {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.bannerButtons {
+    background: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttons button:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+.bannerSocials {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 25px;
+}
+
+.socialImages {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 40px;
+}
+
+.buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#bannerBar {
+    background-color: var(--banner-bg);
+    box-shadow: var(--box-shadow);
+}
+
+.text {
+    color: var(--text-color);
+    animation: fadeIn;
+}
+
+.textList {
+    color: var(--accent-color);
+}
+
+.textCommInfo {
+    color: var(--text-color);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}

@@ -2,7 +2,18 @@
 <html lang="en" class="scrollbar-bullshit">
 
 <head>
-    <link id="style" rel="stylesheet" href="dark.css">
+    <link id="style" rel="stylesheet" href="style.css">
+
+    <script>
+        var darkMode = localStorage.getItem("darkMode") === "true";
+
+        if (darkMode) {
+            document.documentElement.classList.add("dark-mode");
+        } else {
+            document.documentElement.classList.remove("dark-mode");
+        }
+    </script>
+
     <title>Sen's Site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -29,7 +40,7 @@
         <div class="time" id="time"></div>
     </div>
     <div style="overflow-y: scroll; scroll-behavior: smooth; scrollbar-width: none;">
-        <div id="Home">
+        <div id="Home" style="display: block">
             <header id="mainHeader" class="text" style="font-size: 250px; text-align: center;"></header>
             <p id="splashText" class="text" style="text-align: center; font-size:40px;"></p>
             <div style="padding: 75px;"></div>
@@ -37,45 +48,55 @@
                 <p class="text"
                     style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px; text-align: justify;">
                     HEY! You, yeah you, the person reading this. Welcome to my personal website, where you can find
-                    some information about me and my work. Click the buttons on the banner above to shimmy your way over
-                    to learn more about me, or maybe move yourself over to the music tab and listen to some of my tunes.
+                    some information about me and my work. Click the buttons on the banner above to shimmy your way
+                    over
+                    to learn more about me, or maybe move yourself over to the music tab and listen to some of my
+                    tunes.
                     Quite possibly you might check out my socials, possibly get in touch with me, either about a
-                    bug/typo here, maybe some feedback on my music, or maybe just to say have a short chat. Who knows,
+                    bug/typo here, maybe some feedback on my music, or maybe just to say have a short chat. Who
+                    knows,
                     you might be able to find something interesting here.
                 </p>
             </div>
         </div>
 
-        <div id="About">
+        <div id="About" style="display: none;">
             <header id="mainHeader" class="text" style="font-size: 250px; text-align: center;">About Me</header>
             <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">I'm
-                Senexd, a protogen/nardo whatever-the-fuck who makes music, does programming, and some other stuff.</p>
+                Senexd, a protogen/nardo whatever-the-fuck who makes music, does programming, and some other stuff.
+            </p>
             <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">I
                 really don't know what else much to say here so lemme just blast off a bunch of shit:</p>
-            <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">- Trans
+            <p class="textList" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">-
+                Trans
             </p>
-            <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">- Furry
+            <p class="textList" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">-
+                Furry
             </p>
-            <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">-
+            <p class="textList" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">-
                 Learning Esperanto</p>
-            <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">- 18yrs
+            <p class="textList" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">-
+                18yrs
                 Old</p>
-            <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">- Avid
+            <p class="textList" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">-
+                Avid
                 Feline Enjoyer</p>
-            <p class="text" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">- VRChat
+            <p class="textList" style="text-align: center; font-size:30px; margin-left: 50px; margin-right: 50px;">-
+                VRChat
                 No-lifer</p>
         </div>
 
-        <div id="Comms">
+        <div id="Comms" style="display: none;">
             <header id="mainHeader" class="text" style="font-size: 250px; text-align: center;">Commissions</header>
-            <p class="text" style="text-align: center; font-size: 30px;">Interested in commissions? Read below for more
+            <p class="text" style="text-align: center; font-size: 30px;">Interested in commissions? Read below for
+                more
                 details and important info</p>
             <p class="text" style="text-align: center; font-size: 200px; margin-top: 50px;">↓↓↓</p>
-            <p class="text"
-                style="text-align: center; font-size: 30px; padding-top: 50px; margin-left: 25%; margin-right: 25%;">
-                poopfarts
+            <p class="textCommInfo"
+                style="text-align: center; font-size: 30px; padding-top: 75px; margin-left: 25%; margin-right: 25%;">
             </p>
         </div>
+    </div>
     </div>
     <script src="script.js"></script>
     <script src="time.js"></script>

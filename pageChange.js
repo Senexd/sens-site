@@ -1,24 +1,29 @@
 var activeDiv = "Home";
-let slideIndex = 0;
-
-document.getElementById("Home").style.display = "block";
-document.getElementById("About").style.display = "none";
-document.getElementById("Comms").style.display = "none";
+var isAnimating = false;
+var time = .3
 
 document.getElementById("homeButton").addEventListener("click", function () {
-    document.getElementById(activeDiv).style.display = "none";
-    document.getElementById("Home").style.display = "block";
-    activeDiv = "Home";
+    fadeSwap(activeDiv, "Home");
 });
 
 document.getElementById("aboutButton").addEventListener("click", function () {
-    document.getElementById(activeDiv).style.display = "none";
-    document.getElementById("About").style.display = "block";
-    activeDiv = "About";
+    fadeSwap(activeDiv, "About");
 });
 
 document.getElementById("commButton").addEventListener("click", function () {
-    document.getElementById(activeDiv).style.display = "none";
-    document.getElementById("Comms").style.display = "block";
-    activeDiv = "Comms";
+    fadeSwap(activeDiv, "Comms");
 });
+
+async function fadeSwap(currentDiv, newDiv) {
+    if (!isAnimating && (currentDiv != newDiv)) {
+        isAnimating = true;
+        document.getElementById(currentDiv).style.animation = `fadeOut ${time}s linear`;
+        await new Promise(resolve => setTimeout(resolve, time * 1000));
+        document.getElementById(currentDiv).style.display = "none";
+        document.getElementById(newDiv).style.animation = `fadeIn ${time}s linear`;
+        await new Promise(resolve => setTimeout(resolve, time * 1000));
+        document.getElementById(newDiv).style.display = "block";
+        isAnimating = false;
+        activeDiv = newDiv;
+    }
+}

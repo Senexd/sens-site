@@ -45,7 +45,7 @@ let i = 0;
 function loadPostSplash() {
     if ((i < 1) & loadPostSplashElements) {
         postSplashElements.style.opacity = i += .01;
-        setTimeout(loadPostSplash, 10);
+        setTimeout(loadPostSplash, 1);
     }
 }
 
