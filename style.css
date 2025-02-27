@@ -94,6 +94,7 @@ body {
 #bannerBar {
     background-color: var(--banner-bg);
     box-shadow: var(--box-shadow);
+    padding: 30px 22px;
 }
 
 .text {
@@ -107,6 +108,14 @@ body {
 
 .textCommInfo {
     color: var(--text-color);
+}
+
+#mainHeader {
+    font-size: 250px;
+}
+
+#intro {
+    text-align: justify;
 }
 
 @keyframes fadeIn {
@@ -130,5 +139,121 @@ body {
         opacity: 0;
         visibility: hidden;
         display: none;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .bannerButtons {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .bannerSocials {
+        top: 20px;
+        right: 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .socialImages {
+        width: 35px;
+        height: 35px;
+    }
+
+    .time {
+        font-size: 60px;
+    }
+
+    #bannerBar {
+        padding: 90px 22px;
+    }
+
+    #Home,
+    #About,
+    #Comms {
+        padding: 15px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .textList {
+        font-size: 20px;
+    }
+
+    .textCommInfo {
+        font-size: 22px;
+    }
+
+    #mainHeader {
+        font-size: 100px;
+    }
+
+    #intro {
+        text-align: center;
+    }
+}
+
+/* Smaller Mobile (Phones) */
+@media (max-width: 480px) {
+    .bannerButtons {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .buttons {
+        gap: 5px;
+    }
+
+    .bannerSocials {
+        top: 10px;
+        right: 5px;
+        gap: 10px;
+    }
+
+    #bannerBar {
+        padding: 70px 22px;
+    }
+
+    .socialImages {
+        width: 30px;
+        height: 30px;
+    }
+
+    .time {
+        font-size: 40px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .textList {
+        font-size: 18px;
+    }
+
+    .textCommInfo {
+        font-size: 20px;
+    }
+
+    #mainHeader {
+        font-size: 50px;
+    }
+
+    #Home,
+    #About,
+    #Comms {
+        padding: 10px;
     }
 }
