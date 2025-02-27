@@ -1,5 +1,5 @@
 function updateTime() {
-    document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
+    document.getElementById("time").textContent = new Date().toLocaleTimeString();
     setTimeout(updateTime, 1000);
 }
 
