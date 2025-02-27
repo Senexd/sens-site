@@ -10,7 +10,7 @@ let loadPostSplashElements = false;
 
 const splashTexts = [
     "Today's gonna be a good day!",
-    "https://bsky.app/profile/senexd.me",
+    "I made a majority of this site whilst in school!",
     "I better not catch you frowning",
     "MA, MA! I'M ONLINE MA!",
     "If you're seeing this, you rolled a 1/10 chance :)",
