@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link id="style" rel="stylesheet" href="style.css">
+
+    <script>
+        var darkMode = localStorage.getItem("darkMode") === "true";
+
+        if (darkMode) {
+            document.documentElement.classList.add("dark-mode");
+        } else {
+            document.documentElement.classList.remove("dark-mode");
+        }
+    </script>
+
+    <title>Sen's Site</title>
+</head>
+
+<body>
+    <div id="bannerBar" style="position:sticky; top: 10px; padding: 30px 22px; border-radius: 15px;">
+        <div class="buttons">
+            <button class="bannerButtons" id="colorMode">☾/☀︎</button>
+        </div>
+        <div class="bannerSocials">
+            <a href="https://bsky.app/profile/senexd.me">
+                <img class="socialImages" src="images/bsky.png" alt="Bluesky">
+            </a>
+            <a href="https://discord.gg/RHpPQrYMEQ">
+                <img class="socialImages" src="images/discord-mark-blue.png" alt="Discord">
+            </a>
+            <a href="https://www.youtube.com/@Senexd">
+                <img class="socialImages" src="images/yt_icon_rgb.png" alt="Youtube">
+            </a>
+        </div>
+        <div class="time" id="time"></div>
+    </div>
+    <div>
+        <h1 class="text" style="text-align: center; font-size: 50px;">Under Construction!</h1>
+        <p class="text" style="text-align: center; font-size: 20px;">Please come back soon, Senexd.me is
+            under
+            construction.<br>Making a website solo is an VERY time-consuming process, especially making it look good.
+        </p>
+        <p class="text" style="text-align: center; font-size: 20px;">Check <a
+                href="https://bsky.app/profile/senexd.me">my Bluesky<a>
+                    for more information and updates</p>
+    </div>
+    <script src="time.js"></script>
+    <script src="colorModeSwapper.js"></script>
+</body>
+
+</html>
